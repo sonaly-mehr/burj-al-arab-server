@@ -40,8 +40,9 @@ client.connect(err => {
           })
       })
 });
-    
+  
+const port = 5000;
 app.get('/', (req, res)=> {
     res.send("db is working!!");
 })
-app.listen(5000, () => console.log('listening to port 5000'));
+app.listen(process.env.PORT || port);
